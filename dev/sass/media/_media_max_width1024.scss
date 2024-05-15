@@ -1,4 +1,47 @@
 @media screen and (max-width: 1024px) {
+    .header_container {
+        height: 40px;
+    }
+    
+    .logo{
+        display: none;
+    }
+    
+    .nav_section {
+        display: none;
+        position: absolute;
+        background-color: #363A4D;
+        top: 72px;
+        left: 0;
+        &.show {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .nav_list {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 37px;
+        margin-bottom: 34px;
+        a {
+            font-size: 24px;
+            line-height: 222%;
+        }
+    }
+
+    .nav_btn {
+        padding: 21px 84px;
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+
+    #burger {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
 }
 
 

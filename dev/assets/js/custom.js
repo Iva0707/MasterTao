@@ -1,7 +1,8 @@
-$('.single-item').slick();
+const burger = document.querySelector('#burger');
+const navSection = document.querySelector('.nav_section');
 
+function showNav(){
+  navSection.classList.toggle('show');
+}
 
-
-Fancybox.bind("[data-fancybox]", {
-    // Your custom options
-  });
+burger.addEventListener('click', showNav);

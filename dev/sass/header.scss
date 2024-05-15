@@ -1,0 +1,83 @@
+.header_container {
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 39px;
+    position: relative;
+}
+
+.nav_section {
+    display: flex;
+    width: 100%;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    gap: 45px;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        line-height: 146%;
+        position: relative;
+    }
+
+    a:hover {
+        color: #89C249;
+        transition: .3s;
+    }
+
+    a:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0px;
+        background-color: #89C249;
+    }
+
+    a:hover:before {
+        width: 100%;
+        transition: .3s;
+    }
+}
+
+.nav_btn {
+    padding: 13px 26px;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+    background-color: #fff;
+}
+
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    width: 28px;
+    height: 3px;
+    transition-duration: .1s;
+    border-radius: 0px;
+    background-color: #fff;
+}
+
+.hamburger.is-active:hover .hamburger-inner,
+.hamburger.is-active:hover .hamburger-inner:after,
+.hamburger.is-active:hover .hamburger-inner:before,
+.hamburger:hover .hamburger-inner,
+.hamburger:hover .hamburger-inner:after,
+.hamburger:hover .hamburger-inner:before  {
+    background-color: #89C249;
+}
+
+.hamburger.is-active:hover,
+.hamburger:hover {
+    opacity: 1;
+}
