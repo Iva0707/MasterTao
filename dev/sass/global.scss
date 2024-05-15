@@ -6,8 +6,8 @@
 
 body {
     font-family: "Proxima Nova", sans-serif;
-    background-color: #282B38;
-    color: #ffffff;
+    background-color: $color-background;
+    color: $color-text;
 }
 
 ul li,
@@ -16,7 +16,7 @@ ol li {
 }
 
 a {
-    color: #E58D35;
+    color: $color-accent;
     text-decoration: underline;
 }
 
@@ -27,7 +27,7 @@ ol {
 ol li::before {
     counter-increment: list;
     content: counter(list) ".";
-    color: #89C249;
+    color: $color-primary;
     margin-right: 12px;
     font-weight: 600;
     font-size: 18px;
@@ -52,29 +52,29 @@ ol li::before {
 }
 
 .color__item_1 {
-    background-color: #E58D35;
+    background-color: $color-accent;
 }
 
 .color__item_2 {
-    background-color: #89C249;
+    background-color: $color-primary;
 }
 
 .color__item_3 {
-    background-color: #282B38;
-    border: 1px solid #fff;
+    background-color: $color-background;
+    border: 1px solid $color-text;
 }
 
 .color__item_4 {
-    background-color: #363A4D;
+    background-color: $color-bg-light;
 }
 
 ::selection {
-    background-color: #89C249;
+    background-color: $color-primary;
 }
 
 .markup__ul_container ul li:before {
     content: "";
-    background-color: #89C249;
+    background-color: $color-primary;
     margin-right: 12px;
     width: 8px;
     height: 8px;
@@ -176,8 +176,8 @@ h6,
 [type="radio"] + label:before {
     content: "";
     display: inline-block;
-    background-color: #FFFFFF;
-    border: 1px solid #282B38;
+    background-color: $color-text;
+    border: 1px solid $color-background;
     border-radius: 4px;
     width: 24px;
     height: 24px;
@@ -196,16 +196,16 @@ h6,
 
 [type="radio"]:checked + label:before {
     content: "•";
-    background: #fff;
+    background: $color-text;
     font-size: 40px;
     line-height: 18px;
-    color: #282B38;
+    color: $color-background;
     text-align: center;
 }
 
 [type="checkbox"] + label:hover::before,
 [type="radio"] + label:hover::before {
-  border: 1px solid #E58D35;
+  border: 1px solid $color-accent;
 }
 
 .markup__buttons_container button {
@@ -214,16 +214,16 @@ h6,
 
 .btn {
     font-weight: 600;
-    color: #ffffff;
+    color: $color-text;
     border-radius: 90px;
     line-height: 146%;
     padding: 13px 18px;
-    border: 1px solid #E58D35;
+    border: 1px solid $color-accent;
     font-size: 15px;
 }
 
 .btn-primary {
-    background-color: #E58D35;
+    background-color: $color-accent;
 }
 
 .btn-secondary {
@@ -239,15 +239,15 @@ h6,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
-    background-color: #89C249;
-    border-color: #89C249;
+    background-color: $color-primary;
+    border-color: $color-primary;
 }
 
 .btn-secondary:hover,
 .btn-secondary:active,
 .btn-secondary:focus {
-    background-color: #89C249;
-    border-color: #89C249;
+    background-color: $color-primary;
+    border-color: $color-primary;
 }
 
 .btn-check:checked+.btn,
@@ -255,8 +255,8 @@ h6,
 .btn.show,
 .btn:first-child:active,
 :not(.btn-check)+.btn:active {
-    background-color: #89C249;
-    border-color: #89C249;
+    background-color: $color-primary;
+    border-color: $color-primary;
 }
 
 .btn-lg .icon {

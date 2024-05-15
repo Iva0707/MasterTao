@@ -20,14 +20,14 @@
 
     a {
         text-decoration: none;
-        color: #fff;
+        color: $color-text;
         font-size: 16px;
         line-height: 146%;
         position: relative;
     }
 
     a:hover {
-        color: #89C249;
+        color: $color-primary;
         transition: .3s;
     }
 
@@ -38,7 +38,7 @@
         left: 0;
         height: 2px;
         width: 0px;
-        background-color: #89C249;
+        background-color: $color-primary;
     }
 
     a:hover:before {
@@ -51,21 +51,40 @@
     padding: 13px 26px;
 }
 
+.hamburger {
+    padding: 0;
+}
+
+.hamburger-box {
+    width: 28px;
+}
+
+.hamburger-inner {
+    margin-top: 0px
+}
+
+.hamburger-inner:before {
+    top: -11px
+}
+
+.hamburger-inner:after {
+    bottom: -11px
+}
+
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner:after,
 .hamburger.is-active .hamburger-inner:before {
-    background-color: #fff;
+    background-color: $color-text;
 }
-
 
 .hamburger-inner,
 .hamburger-inner:after,
 .hamburger-inner:before {
     width: 28px;
-    height: 3px;
+    height: 2px;
     transition-duration: .1s;
     border-radius: 0px;
-    background-color: #fff;
+    background-color: $color-text;
 }
 
 .hamburger.is-active:hover .hamburger-inner,
@@ -74,7 +93,7 @@
 .hamburger:hover .hamburger-inner,
 .hamburger:hover .hamburger-inner:after,
 .hamburger:hover .hamburger-inner:before  {
-    background-color: #89C249;
+    background-color: $color-primary;
 }
 
 .hamburger.is-active:hover,
