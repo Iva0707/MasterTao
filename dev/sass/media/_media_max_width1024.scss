@@ -10,15 +10,17 @@
     }
     
     .nav_section {
-        display: none;
         position: absolute;
         background-color: $color-bg-light;
         top: 55px;
         left: 0;
+        max-height: 0px;
+        overflow: hidden;
         &.show {
-            display: flex;
             flex-direction: column;
             align-items: center;
+            max-height: 508px;
+            transition: .4s;
         }
     }
     
