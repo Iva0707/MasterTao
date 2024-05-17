@@ -1,4 +1,10 @@
 @media screen and (max-width: 1024px) {
+    
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
     .header_container {
         max-height: 40px;
         margin-top: 17px;
@@ -6,12 +12,13 @@
     }
     
     .logo{
-        display: none;
+        max-width: 126px;
     }
     
     .nav_section {
         position: absolute;
         background-color: $color-bg-light;
+        box-shadow: 14px 22px 40px 0 $box-shadow;
         top: 55px;
         left: 0;
         max-height: 0px;
@@ -47,5 +54,3 @@
         align-items: center;
     }
 }
-
-

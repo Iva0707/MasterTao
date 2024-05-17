@@ -1,8 +1,13 @@
 .header_container {
-    display: flex;
+    max-width: 1240px;
     margin-top: 25px;
     margin-bottom: 39px;
+    display: flex;
     position: relative;
+}
+
+.logo {
+    max-width: 172px;
 }
 
 .nav_section {
@@ -60,15 +65,13 @@
 }
 
 .hamburger-inner {
-    margin-top: 0px
-}
-
-.hamburger-inner:before {
-    top: -11px
-}
-
-.hamburger-inner:after {
-    bottom: -11px
+    margin-top: 0px;
+    &:before {
+        top: -11px
+    }
+    &:after {
+        bottom: -11px
+    }
 }
 
 .hamburger.is-active .hamburger-inner,
