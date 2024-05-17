@@ -16,11 +16,11 @@
         left: 0;
         max-height: 0px;
         overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: .3s;
         &.show {
-            flex-direction: column;
-            align-items: center;
             max-height: 508px;
-            transition: .4s;
         }
     }
     
