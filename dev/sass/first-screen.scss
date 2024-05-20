@@ -1,0 +1,12 @@
+.swiper {
+  max-width: 600px;
+  height: 300px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  & img {
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);  }
+}
