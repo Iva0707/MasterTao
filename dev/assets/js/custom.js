@@ -1,3 +1,4 @@
+// _____burger_____
 const burger = document.querySelector('#burger');
 const navSection = document.querySelector('.nav_section');
 
@@ -7,9 +8,14 @@ function showNav(){
 
 burger.addEventListener('click', showNav);
 
+
+// _____fancybox_____
 Fancybox.bind("[data-fancybox]", {});
+
+// _____slick_____
 $('.single-item').slick();
 
+// _____swiper_____
 const swiper = new Swiper('.swiper', {  
   loop: true,
   pagination: {
@@ -21,14 +27,4 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
   autoplay: false,
-});
-
-$(document).ready(function(){
-  $('.your-class').slick({
-      dots: true,
-      infinite: false,
-      pauseOnHover: true,
-      autoplay: true,
-      autoplaySpeed: 1000,
-  });
 });

@@ -1,4 +1,5 @@
 .header_container {
+    @extend .container;
     margin-top: 25px;
     margin-bottom: 39px;
     display: flex;
