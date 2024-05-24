@@ -17,6 +17,7 @@ $('.single-item').slick();
 
 // _____swiper_____
 const swiper = new Swiper('.slider_info', {  
+  spaceBetween: 40,
   loop: true,
   pagination: {
     el: '.swiper-pagination',
