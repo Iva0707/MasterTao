@@ -1,43 +1,22 @@
-.swiper {
-  width: 800px;
-  height: 400px;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
+.banner_title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.26;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  max-width: 480px;
+}
+
+.banner_description {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.36;
+  margin-bottom: 37px;
+  max-width: 320px;
 }
 
 .swiper-slide {
+  min-height: 700px;
   display: flex;
-  justify-content: center;
-  & img {
-    border-radius: 5px;
-    box-shadow: 10px 10px 30px #0000004d;
-  }
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: $color-primary;
-  &:hover {
-  opacity: 0.8;
-  transition: .2s;
-  }
-}
-.swiper-pagination-bullet {
-  background: transparent;
-  opacity: 1;
-  border: 2px solid $color-text;
-  &:hover {
-  transform: scale(1.2);
-  transition: .2s;
-  }
-}
-
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 13px;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background: $color-text;
+  align-items: center;
 }

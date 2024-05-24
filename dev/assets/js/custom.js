@@ -16,7 +16,7 @@ Fancybox.bind("[data-fancybox]", {});
 $('.single-item').slick();
 
 // _____swiper_____
-const swiper = new Swiper('.swiper', {  
+const swiper = new Swiper('.slider_info', {  
   loop: true,
   pagination: {
     el: '.swiper-pagination',
