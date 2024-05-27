@@ -8,7 +8,6 @@
     align-items: center;
     background-size: cover;
     border-radius: 20px;
-    padding: 0 72px;
   }
   & .swiper-pagination {
     bottom: 35px;
@@ -19,7 +18,7 @@
 }
 
 .banner {
-  margin-top: -65px;
+  margin: -65px 72px 0 72px;
   & .banner_title {
     font-size: 56px;
     font-weight: 700;
