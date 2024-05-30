@@ -10,6 +10,20 @@ body {
     color: $color-text;
 }
 
+body.overflow-hidden {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 11;
+        background-color: #282b3865;
+        backdrop-filter: blur(4px);
+    }
+}
+
 ul li,
 ol li {
     list-style: none;
@@ -48,8 +62,8 @@ ol li::before {
     max-width: 1180px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
 }
 
 .col-md-4 {
@@ -284,4 +298,82 @@ h6,
 .btn:focus-visible,
 .btn:focus {
     box-shadow: none;
+}
+
+.template_title {
+    padding-bottom: 60px;
+    position: relative;
+    text-align: center;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 85px;
+        height: 2px;
+        background-color: $color-primary;
+        left: 50%;
+        bottom: 35px;
+        transform: translate(-50%, 0);
+    }
+    & h2 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.25;
+        text-transform: uppercase;
+    }
+    & h3 {
+        font-size: 24px;
+        font-weight: 300;
+    }
+    &.template_title_start {
+        text-align: start;
+        &:after {
+            left: 0;
+            transform: none;
+        }
+    }
+    &.template_title_half {
+        max-width: 600px;
+        width: 100%;
+        text-align: left;
+        &:after {
+            display: none;
+        }
+        & h2:after {
+            content: '';
+            display: inline-block;
+            width: 85px;
+            height: 2px;
+            background-color: $color-primary;
+            margin: 8px 20px;
+        }
+    }
+}
+
+section {
+    padding: 90px 0 100px;
+    margin-bottom: 95px;
+    &.accent_bg {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            max-width: 1820px;
+            width: calc(100% - 30px);
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            border-radius: 20px;
+            background-color: $color-bg-light;
+        }
+    }
+    &:nth-child(odd) {
+        .template_title,
+        .template_title h2 {
+            &:after {
+                background-color: $color-accent;
+            }
+        }
+    }
 }

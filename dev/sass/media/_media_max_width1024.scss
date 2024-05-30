@@ -1,14 +1,23 @@
 @media screen and (max-width: 1024px) {
+    section {
+        &.accent_bg {
+            &:before {
+                width: 100%;
+                border-radius: 0px;
+            }
+        }
+    }
     
     .container {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    // _________header_________
     
     .header_container {
-        max-height: 40px;
-        margin-top: 17px;
-        margin-bottom: 15px;
+        padding-top: 17px;
+        padding-bottom: 15px;
     }
     
     .logo{
@@ -19,7 +28,7 @@
         position: absolute;
         background-color: $color-bg-light;
         box-shadow: 14px 22px 40px 0 $box-shadow;
-        top: 50px;
+        top: 68px;
         left: 0;
         max-height: 0px;
         overflow: hidden;
@@ -54,4 +63,53 @@
         margin-left: auto;
         align-items: center;
     }
+
+// _________first screen_________
+    .slider_info {
+        padding: 0;
+        & .swiper-slide {
+            min-height: calc(100vh - 68px);
+            border-radius: 0px;
+            padding: 36px 0 20px;
+            background-position: center;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #04051199;
+                z-index: -1;
+            }
+        }
+        &.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+            border-radius: 0px;
+        }
+        & .btn-lg {
+            padding: 20px 36px;
+        }
+    }
+
+    .first_screen img {
+        border-radius: 0px;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        & .banner_title {
+            font-size: 32px;
+            max-width: 295px;
+        }
+        & .banner_description {
+            font-size: 16px;
+            max-width: 275px;
+            margin-bottom: 20px;
+        }
+    }
+
 }

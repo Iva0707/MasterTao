@@ -1,9 +1,16 @@
+header {
+    position: relative;
+    background-color: $color-background;
+    z-index: 12;
+}
+
 .header_container {
     @extend .container;
-    margin-top: 25px;
-    margin-bottom: 39px;
     display: flex;
+    padding-top: 25px;
+    padding-bottom: 39px;
     position: relative;
+    z-index: 11;
 }
 
 .logo {

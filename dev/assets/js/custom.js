@@ -1,9 +1,11 @@
 // _____burger_____
 const burger = document.querySelector('#burger');
+const body = document.querySelector('body');
 const navSection = document.querySelector('.nav_section');
 
 function showNav(){
   navSection.classList.toggle('show');
+  body.classList.toggle('overflow-hidden');
 }
 
 burger.addEventListener('click', showNav);
@@ -17,15 +19,24 @@ $('.single-item').slick();
 
 // _____swiper_____
 const swiper = new Swiper('.slider_info', {  
-  spaceBetween: 40,
+  spaceBetween: 12,
   loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    enabled: false,
   },
-  autoplay: false,
+
+  breakpoints: {
+    992: {
+      spaceBetween: 40,
+      navigation: {
+        enabled: true,
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    }
+  }
 });
