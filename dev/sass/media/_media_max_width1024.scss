@@ -16,7 +16,7 @@
     // _________header_________
     
     .header_container {
-        padding-top: 17px;
+        padding-top: 18px;
         padding-bottom: 15px;
     }
     
@@ -102,13 +102,13 @@
         align-items: center;
         text-align: center;
         & .banner_title {
-            font-size: 32px;
-            max-width: 295px;
+            font-size: 44px;
+            max-width: 350px;
         }
         & .banner_description {
-            font-size: 16px;
-            max-width: 275px;
-            margin-bottom: 20px;
+            font-size: 18px;
+            max-width: 300px;
+            margin-bottom: 30px;
         }
     }
 

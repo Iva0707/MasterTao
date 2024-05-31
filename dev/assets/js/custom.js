@@ -30,7 +30,7 @@ const swiper = new Swiper('.slider_info', {
   },
 
   breakpoints: {
-    992: {
+    1024: {
       spaceBetween: 40,
       navigation: {
         enabled: true,

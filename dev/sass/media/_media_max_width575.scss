@@ -1,3 +1,14 @@
 @media screen and (max-width: 575px) {
-    
+// _________first screen_________    
+    .banner {
+        & .banner_title {
+            font-size: 32px;
+            max-width: 295px;
+        }
+        & .banner_description {
+            font-size: 16px;
+            max-width: 275px;
+            margin-bottom: 20px;
+        }
+    }
 }
