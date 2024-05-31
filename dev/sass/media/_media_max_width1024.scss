@@ -17,7 +17,7 @@
     
     .header_container {
         padding-top: 18px;
-        padding-bottom: 15px;
+        padding-bottom: 18px;
     }
     
     .logo{
@@ -28,7 +28,7 @@
         position: absolute;
         background-color: $color-bg-light;
         box-shadow: 14px 22px 40px 0 $box-shadow;
-        top: 68px;
+        top: 72px;
         left: 0;
         max-height: 0px;
         overflow: hidden;
@@ -70,7 +70,7 @@
         & .swiper-slide {
             min-height: calc(100vh - 68px);
             border-radius: 0px;
-            padding: 36px 0 20px;
+            padding: 26px 0 20px;
             background-position: center;
             position: relative;
             &:before {
