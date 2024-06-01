@@ -244,7 +244,7 @@ h6,
         }
     }
     &.template_title_half {
-        max-width: 600px;
+        max-width: 620px;
         width: 100%;
         text-align: left;
         &:after {
@@ -262,8 +262,13 @@ h6,
 }
 
 [type="checkbox"],
-[type="radio"] {
+[type="radio"],
+[type="file"] {
     display: none;
+}
+
+[type="file"] + label {
+    cursor: pointer;
 }
 
 [type="checkbox"] + label,
@@ -374,4 +379,11 @@ h6,
 .btn:focus-visible,
 .btn:focus {
     box-shadow: none;
+}
+
+input {
+    &:focus-visible {
+        outline: none;
+        transform: none;
+    }
 }
