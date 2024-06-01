@@ -1,5 +1,6 @@
 @media screen and (max-width: 1024px) {
     section {
+        padding: 55px 0 60px;
         &.accent_bg {
             &:before {
                 width: 100%;
@@ -11,6 +12,32 @@
     .container {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .template_title {
+        & h2 {
+            font-size: 24px;
+        }
+        & h3 {
+            font-size: 16px;
+        }
+        &.template_title_start {
+            text-align: center;
+            &:after {
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+        &.template_title_half {
+            max-width: 100%;
+            text-align: center;
+            &:after {
+                display: inline-block;
+            }
+            & h2:after {
+                display: none;
+            }
+        }
     }
 
     // _________header_________
