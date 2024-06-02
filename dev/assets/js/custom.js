@@ -56,3 +56,12 @@ const swiper = new Swiper('.slider_info', {
     }
   }
 });
+
+// _____input file_____
+
+const fileInput = document.querySelector('#calculation_file');
+const fileName = document.querySelector('#file_name')
+
+fileInput.addEventListener('change', () => {
+  fileName.innerHTML = fileInput.files[0].name;
+});
