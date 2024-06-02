@@ -283,6 +283,10 @@ h6,
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 126%;
+    color: $color-text;
 }
 
 [type="checkbox"] + label:before,
@@ -317,7 +321,6 @@ h6,
 
 [type="checkbox"] + label:hover::before,
 [type="radio"] + label:hover::before {
-//   border: 1px solid $color-primary;
   box-shadow: 0px 0px 9px 0 $color-primary;
 
 
@@ -385,14 +388,21 @@ h6,
     margin: 0 -14px 0 47px;
     width: 27px;
     height: 27px;
-    transition: 0.3s;
+    transition: .2s;
 }
 
-.btn:hover .icon {
+.btn:hover .icon,
+.btn:active .icon,
+.btn:focus .icon {
     filter: invert(100%) sepia(0%) saturate(0%) brightness(180%) contrast(101%);
 }
 
 .btn:focus-visible,
 .btn:focus {
+    box-shadow: none;
+}
+
+.btn-primary:active:focus,
+:not(.btn-check) + .btn:active {
     box-shadow: none;
 }
