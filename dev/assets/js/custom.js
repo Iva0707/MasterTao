@@ -59,9 +59,19 @@ const swiper = new Swiper('.slider_info', {
 
 // _____input file_____
 
-const fileInput = document.querySelector('#calculation_file');
-const fileName = document.querySelector('#file_name')
+const fileLabel = document.querySelectorAll('.calculation_label');
+const fileInput = document.querySelectorAll('.calculation_input');
+const fileBtn = document.querySelectorAll('.form_btn')
 
-fileInput.addEventListener('change', () => {
-  fileName.innerHTML = fileInput.files[0].name;
-});
+
+
+fileInput.forEach(item => {
+  item.addEventListener('change', function() {
+    let fileName = item.closest('.input_box').querySelector('.file_name')
+    fileName.innerHTML = item.files[0].name;
+  })
+})
+
+  fileLabel.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('special_gap'))
+
+  fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('btn_gap'))
