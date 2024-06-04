@@ -143,6 +143,8 @@
 
 // _________calculation__________
 .calculation_container {
+    margin-left: auto;
+    margin-right: auto;
     padding: 52px 30px 34px 30px;
     & .special_gap {
         margin-bottom: 0px;
@@ -152,7 +154,7 @@
         flex-direction: column;
         gap: 0px;
     }
-    
+
     .control_box {
         padding-top: 6px;
         margin-bottom: 16px;
