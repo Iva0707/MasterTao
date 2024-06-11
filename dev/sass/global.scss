@@ -405,3 +405,8 @@ h6,
 :not(.btn-check) + .btn:active {
     box-shadow: none;
 }
+
+.swiper-initialized {
+    overflow: hidden;
+    position: relative;
+}

@@ -16,6 +16,9 @@
 
     .template_title {
         padding-bottom: 70px;
+        &:after {
+            bottom: 49px;
+        }
         & h2 {
             font-size: 24px;
         }

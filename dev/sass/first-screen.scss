@@ -6,8 +6,6 @@
 
 .slider_info {
   @extend .container-xxl;
-  overflow: hidden;
-  position: relative;
   & .swiper-slide {
     min-height: 700px;
     display: flex;
