@@ -54,32 +54,30 @@ const swiperFirst = new Swiper('.slider_info', {
   }
 });
 
-// const swiperAdvantages = new Swiper('.slider_advantages', {  
-//   spaceBetween: 12,
-//   loop: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   navigation: {
-//     enabled: false,
-//   },
 
-//   breakpoints: {
-//     1024: {
-//       spaceBetween: 40,
-//       navigation: {
-//         enabled: true,
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//       },
-//     }
-//   }
-// });
+// _____input file_____
+
+const fileLabel = document.querySelectorAll('.calculation_label');
+const fileInput = document.querySelectorAll('.calculation_input');
+const fileBtn = document.querySelectorAll('.form_btn')
 
 
 
-/*swiperAdvantages*/
+fileInput.forEach(item => {
+  item.addEventListener('change', function() {
+    let fileName = item.closest('.input_box').querySelector('.file_name')
+    fileName.innerHTML = item.files[0].name;
+  })
+})
+
+  fileLabel.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('special_gap'))
+
+  fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('btn_gap'))
+
+
+// _____swiper_____
+
+
 let swiperAdvantages  
 
 function initAdvantages() {
@@ -132,41 +130,3 @@ mediaQuery(matchMedia1024);
 matchMedia1024.addEventListener("change", function() {
     mediaQuery(matchMedia1024);
 });
-/**/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// _____input file_____
-
-const fileLabel = document.querySelectorAll('.calculation_label');
-const fileInput = document.querySelectorAll('.calculation_input');
-const fileBtn = document.querySelectorAll('.form_btn')
-
-
-
-fileInput.forEach(item => {
-  item.addEventListener('change', function() {
-    let fileName = item.closest('.input_box').querySelector('.file_name')
-    fileName.innerHTML = item.files[0].name;
-  })
-})
-
-  fileLabel.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('special_gap'))
-
-  fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('btn_gap'))

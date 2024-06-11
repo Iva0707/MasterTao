@@ -3,62 +3,62 @@
         <div class="template_title template_title_start template_title_half">
             <h2>Получить рассчет стоимости доставки вашего груза</h2>
         </div>
-            <form class="calculation_container">
-                <div class="form_row">
-                    <div class="form_column">
-                        <div class="input_box">
-                            <label for="category">Категория товара:</label>
-                            <input id="category" type="text" placeholder="Категория товара">
-                        </div>
-                        <div class="input_box">
-                            <label for="weight">Вес груза (кг):</label>
-                            <input id="weight" type="text" placeholder="Введите вес">
-                        </div>
+        <form class="calculation_container">
+            <div class="form_row">
+                <div class="form_column">
+                    <div class="input_box">
+                        <label for="category">Категория товара:</label>
+                        <input id="category" type="text" placeholder="Категория товара">
                     </div>
-                    <div class="form_column">
-                        <div class="input_box">
-                            <label for="price">Стоимость груза:</label>
-                            <input id="price" type="text" placeholder="Введите стоимость">
+                    <div class="input_box">
+                        <label for="weight">Вес груза (кг):</label>
+                        <input id="weight" type="text" placeholder="Введите вес">
+                    </div>
+                </div>
+                <div class="form_column">
+                    <div class="input_box">
+                        <label for="price">Стоимость груза:</label>
+                        <input id="price" type="text" placeholder="Введите стоимость">
+                    </div>
+                    <div class="input_box">
+                        <label for="volume">Объем груза (м3):</label>
+                        <input id="volume" type="text" placeholder="Введите объем">
+                    </div>
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="form_column">
+                    <div class="control_box">
+                        <div class="checkbox_box">
+                            <input id="insurance" type="checkbox" value="insurance">
+                            <label for="insurance">Страховка</label>
                         </div>
-                        <div class="input_box">
-                            <label for="volume">Объем груза (м3):</label>
-                            <input id="volume" type="text" placeholder="Введите объем">
+                        <div class="checkbox_box">
+                            <input id="clearance" type="checkbox" value="clearance">
+                            <label for="clearance">Таможенное оформление</label>
                         </div>
                     </div>
                 </div>
-                <div class="form_row">
-                    <div class="form_column">
-                        <div class="control_box">
-                            <div class="checkbox_box">
-                                <input id="insurance" type="checkbox" value="insurance">
-                                <label for="insurance">Страховка</label>
-                            </div>
-                            <div class="checkbox_box">
-                                <input id="clearance" type="checkbox" value="clearance">
-                                <label for="clearance">Таможенное оформление</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form_column">
-                        <div class="input_box">
-                            <label for="code">Код ТН ВЭД:</label>
-                            <input id="code" type="text" placeholder="Введите код">
-                        </div>
+                <div class="form_column">
+                    <div class="input_box">
+                        <label for="code">Код ТН ВЭД:</label>
+                        <input id="code" type="text" placeholder="Введите код">
                     </div>
                 </div>
-                <div class="form_row">
-                    <div class="form_column">
-                        <div class="input_box">
-                            <div id="file_name" class="file_name">фотография.jpeg</div>
-                            <input id="calculation_file" type="file" class="calculation_input">
-                            <label for="calculation_file" class="calculation_label">Загрузить фото товара</label>
-                        </div>
+            </div>
+            <div class="form_row">
+                <div class="form_column">
+                    <div class="input_box">
+                        <div id="file_name" class="file_name">фотография.jpeg</div>
+                        <input id="calculation_file" type="file" class="calculation_input">
+                        <label for="calculation_file" class="calculation_label">Загрузить фото товара</label>
                     </div>
                 </div>
-                <div class="form_row">
-                    <button type="button" class="btn btn-primary btn-lg form_btn">Следующий шаг<img src="assets/img/btn_arrow.svg" class="icon"></button>
-                </div>
-            </form>
-            <img class="img-fluid calculation_img" src="assets/img/calculation_bg.png" alt="">
+            </div>
+            <div class="form_row">
+                <button type="button" class="btn btn-primary btn-lg form_btn">Следующий шаг<img src="assets/img/btn_arrow.svg" class="icon"></button>
+            </div>
+        </form>
+        <img class="img-fluid calculation_img" src="assets/img/calculation_bg.png" alt="">
     </div>
 </section>
