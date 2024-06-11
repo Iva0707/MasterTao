@@ -1,3 +1,10 @@
+.advantages-page {
+    & .swiper-pagination {
+        position: relative;
+        margin-top: 23px;
+    }
+}
+
 .advantage_content {
     max-width: 263px;
     text-align: center;
