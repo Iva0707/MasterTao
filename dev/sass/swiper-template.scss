@@ -42,6 +42,10 @@
     &.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
         border-radius: 20px;
     }
+    & .swiper-pagination {
+        position: relative;
+        margin-top: 23px;
+    }
 }
 
 .template_card {

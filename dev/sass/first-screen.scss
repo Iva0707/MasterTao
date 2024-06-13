@@ -14,27 +14,30 @@
     border-radius: 20px;
     padding: 0 72px;
   }
-  & .swiper-pagination {
-    bottom: 35px;
-  }
   &.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
     border-radius: 20px;
-  }
-  & .swiper-pagination-bullet {
-    background-color: transparent;
-    border: 2px solid $color-text;
-    opacity: 1;
-    &.swiper-pagination-bullet-active {
-      background-color: $color-text;
     }
-    &:hover {
-      transform: scale(1.2);
-      transition: .2s;
-    }
+}
+
+.swiper-pagination {
+  bottom: 35px;
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent;
+  border: 2px solid $color-text;
+  opacity: 1;
+  &.swiper-pagination-bullet-active {
+    background-color: $color-text;
   }
-  & .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 13px;
+  &:hover {
+    transform: scale(1.2);
+    transition: .2s;
   }
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 13px;
 }
 
 .arrow_container {
