@@ -1,0 +1,104 @@
+.swiper_template {
+    --padding: 90px;
+    padding: 0 var(--padding);
+    margin: 0 calc(-10px - var(--padding));
+    & .swiper-slide {
+        padding: 0 5px;
+    }
+    & .arrow_container {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, 0);
+        max-width: 1323px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 3;
+        & .swiper-button-prev,
+        & .swiper-button-next {
+            position: static;
+            color: #6C6F7F;
+            &:hover {
+                color: $color-primary;
+                transition: .2s;
+            }
+        }
+    }
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        display: inline-block;
+        width: var(--padding);
+        height: 100%;
+        background: $color-background;
+        z-index: 2;
+    }
+    &:after {
+        left: calc(100% - var(--padding));
+    }
+    &.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+        border-radius: 20px;
+    }
+}
+
+.template_card {
+    border-radius: 20px;
+    background-color: $color-bg-light;
+    box-shadow: 5px 15px 40px 0 #1e234226;
+    padding: 0 20px 27px;
+    overflow: hidden;
+    text-align: center;
+    & .img_box {
+        margin: 0 -20px 29px;
+        & .card_img {
+            border-radius: 0;
+            height: 229px;
+            object-fit: contain;
+        }
+    }
+    & .card_title {
+        margin-bottom: 11px;
+        font-weight: 700;
+    }
+    & .card_options {
+        margin-bottom: 12px;
+        & .options_list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 7px;
+            & .option_item {
+                img {
+                    margin-right: 10px;
+                    max-width: 24px;
+                }
+            }
+        }
+        & .card_price {
+            & span {
+                font-size: 22px;
+                line-height: 125%;
+                &:first-child {
+                    color: #a3a3a3;
+                }
+            }
+            & strong {
+                font-weight: 700;
+                font-size: 45px;
+            }
+        }
+    }
+    & .btn_row {
+        display: flex;
+        gap: 14px;
+        & .btn {
+            width: 154px;
+            justify-content: center;
+            padding: 13px 8px;
+        }
+    }
+}

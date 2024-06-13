@@ -30,7 +30,7 @@ function showNav(){
 burger.addEventListener('click', showNav);
 
 
-// _____swiper_____
+// _____swiper first screen_____
 const swiperFirst = new Swiper('.slider_info', {  
   spaceBetween: 12,
   loop: true,
@@ -45,6 +45,38 @@ const swiperFirst = new Swiper('.slider_info', {
   breakpoints: {
     1024: {
       spaceBetween: 40,
+      navigation: {
+        enabled: true,
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    }
+  }
+});
+
+
+// _____swiper delivery_____
+const swiperTemplate = new Swiper('.swiper_template', {  
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 100,
+  pagination: {
+    el: '.swiper-pagination',
+    enabled: true,
+    clickable: true,
+  },
+  navigation: {
+    enabled: false,
+  },
+
+  breakpoints: {
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 3,
+      pagination: {
+        el: '.swiper-pagination',
+        enabled: false,
+      },
       navigation: {
         enabled: true,
         nextEl: '.swiper-button-next',
@@ -75,7 +107,7 @@ fileInput.forEach(item => {
   fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('btn_gap'))
 
 
-// _____swiper_____
+// _____swiper advantager_____
 
 
 let swiperAdvantages  
