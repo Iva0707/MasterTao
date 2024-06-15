@@ -40,8 +40,9 @@ const swiperFirst = new Swiper('.slider_info', {
   },
   navigation: {
     enabled: false,
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
-
   breakpoints: {
     1024: {
       spaceBetween: 40,
@@ -53,7 +54,6 @@ const swiperFirst = new Swiper('.slider_info', {
     }
   }
 });
-
 
 // _____swiper delivery_____
 const swiperTemplate = new Swiper('.swiper_template', {  
@@ -67,8 +67,9 @@ const swiperTemplate = new Swiper('.swiper_template', {
   },
   navigation: {
     enabled: false,
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
-
   breakpoints: {
     1024: {
       spaceBetween: 20,
@@ -86,14 +87,11 @@ const swiperTemplate = new Swiper('.swiper_template', {
   }
 });
 
-
 // _____input file_____
 
 const fileLabel = document.querySelectorAll('.calculation_label');
 const fileInput = document.querySelectorAll('.calculation_input');
 const fileBtn = document.querySelectorAll('.form_btn')
-
-
 
 fileInput.forEach(item => {
   item.addEventListener('change', function() {
@@ -102,63 +100,60 @@ fileInput.forEach(item => {
   })
 })
 
-  fileLabel.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('special_gap'))
-
-  fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('btn_gap'))
+fileLabel.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('special_gap'))
+fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('btn_gap'))
 
 
 // _____swiper advantager_____
 
+// let swiperAdvantages  
 
-let swiperAdvantages  
-
-function initAdvantages() {
-    swiperAdvantages = new Swiper('.slider_advantages', {
-    spaceBetween: 12,
-    loop: true,
-  
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        enabled: true,
-    },
-    breakpoints: {
-        1025: {
-            spaceBetween: 40,
-            navigation: {
-                enabled: true,
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                enabled: false,
-            },
-  
-        }
+// function initAdvantages() {
+const swiperAdvantages = new Swiper('.slider_advantages', {  
+  spaceBetween: 12,
+  loop: true,
+  slidesPerView: 1,
+  // initialSlide: 2,
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      enabled: true,
+  },
+  breakpoints: {
+    1025: {
+      spaceBetween: 0,
+      initialSlide: 0,
+      loop: false,
+      slidesPerColumn: 2,
+      // slidesPerView: 8,
+      slidesPerGroup: 8,
+      simulateTouch: true,
+      pagination: {
+          enabled: false,
+          el: '.swiper-pagination',
+      },
     }
-  });
-}
-
-function destroyAdvantages() {
-  swiperAdvantages.destroy( true )   
-}
-
-
-function mediaQuery(matchMedia1024) {
-    if (matchMedia1024.matches) { // If media query matches
-      initAdvantages()
-    } else {
-      destroyAdvantages()
-    }
-}
-
-// Create a MediaQueryList object
-const matchMedia1024 = window.matchMedia("(max-width: 1024px)")
-
-// Call listener function at run time
-mediaQuery(matchMedia1024);
-
-// Attach listener function on state changes
-matchMedia1024.addEventListener("change", function() {
-    mediaQuery(matchMedia1024);
+  }
 });
+
+// }
+
+// function initialSlide() {
+//   swiperAdvantages.initialSlide: 0   
+// }
+
+// function mediaQuery(matchMedia1024) {
+//     if (matchMedia1024.matches) { // If media query matches
+//       initAdvantages()
+//     } else {
+//       destroyAdvantages()
+//     }
+// }
+
+// const matchMedia1024 = window.matchMedia("(max-width: 1024px)")
+
+// mediaQuery(matchMedia1024);
+
+// matchMedia1024.addEventListener("change", function() {
+//     mediaQuery(matchMedia1024);
+// });
