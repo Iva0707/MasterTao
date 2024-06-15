@@ -127,7 +127,7 @@ const swiperAdvantages = new Swiper('.slider_advantages', {
       slidesPerColumn: 2,
       // slidesPerView: 8,
       slidesPerGroup: 8,
-      simulateTouch: true,
+      simulateTouch: false,
       pagination: {
           enabled: false,
           el: '.swiper-pagination',
