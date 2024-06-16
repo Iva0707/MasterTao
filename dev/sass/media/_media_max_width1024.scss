@@ -167,4 +167,20 @@
     .calculation_img {
         display: none;
     }
+
+// _________swiper template__________
+
+    .swiper_template {
+        padding: 0px 0px 10px;
+        margin: 0 -15px;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+    .template_card {
+        max-width: 360px;
+    }
+
 }

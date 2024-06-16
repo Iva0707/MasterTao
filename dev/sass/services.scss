@@ -1,0 +1,37 @@
+.services-page {
+    & .swiper_template {
+        &:before, 
+        &:after {
+            background: $color-bg-light;
+        }
+        & .template_card {
+            position: relative;
+            height: 482px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            padding: 0 30px 33px;
+            &:after {
+                content: '';
+                position: absolute;
+                background: linear-gradient(0deg, #040511e8 0%, #58585800 100%);
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
+            > * {
+                z-index: 1;
+            }
+            & .card_title {
+                margin-top: auto;
+            }
+            & .card_description {
+                font-size: 15px;
+                font-weight: 400;
+                margin-bottom: 14px;
+                line-height: 19px;
+            }
+        }
+    }
+}

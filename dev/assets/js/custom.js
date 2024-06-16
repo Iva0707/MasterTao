@@ -59,6 +59,7 @@ const swiperFirst = new Swiper('.slider_info', {
 const swiperAdvantages = new Swiper('.slider_advantages', {  
   spaceBetween: 12,
   loop: true,
+  simulateTouch: true,
   slidesPerView: 1,
   pagination: {
       el: '.swiper-pagination',
@@ -70,7 +71,7 @@ const swiperAdvantages = new Swiper('.slider_advantages', {
       spaceBetween: 0,
       initialSlide: 0,
       loop: false,
-      slidesPerColumn: 2,
+      // slidesPerColumn: 2,
       slidesPerGroup: 8,
       simulateTouch: false,
       pagination: {
@@ -85,7 +86,7 @@ const swiperAdvantages = new Swiper('.slider_advantages', {
 const swiperTemplate = new Swiper('.swiper_template', {  
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 100,
+  spaceBetween: 15,
   pagination: {
     el: '.swiper-pagination',
     enabled: true,

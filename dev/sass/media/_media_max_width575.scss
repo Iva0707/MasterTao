@@ -11,4 +11,43 @@
             margin-bottom: 20px;
         }
     }
+
+// _________swiper template_________    
+
+    .template_card {
+        max-width: 335px;
+        padding: 0 23px 27px;
+        & .img_box {
+            margin: 0 -23px 29px;
+            & .card_img {
+                height: 213px;
+            }
+        }
+        & .btn_row {
+            gap: 12px;
+            & .btn {
+                width: 138px;
+            }
+        }
+    }
+
+// _________services page_________    
+  
+    .services-page {
+        & .swiper_template {
+            & .template_card {
+                & .card_description {
+                    font-size: 14px;
+                    margin-bottom: 7px;
+                    line-height: 17px;
+                }
+                & .btn_row {
+                    & .btn {
+                        width: 153px;
+                    }   
+                }
+            }
+        }
+    }
+    
 }
