@@ -29,7 +29,6 @@ function showNav(){
 
 burger.addEventListener('click', showNav);
 
-
 // _____swiper first screen_____
 const swiperFirst = new Swiper('.slider_info', {  
   spaceBetween: 12,
@@ -71,7 +70,6 @@ const swiperAdvantages = new Swiper('.slider_advantages', {
       spaceBetween: 0,
       initialSlide: 0,
       loop: false,
-      // slidesPerColumn: 2,
       slidesPerGroup: 8,
       simulateTouch: false,
       pagination: {
