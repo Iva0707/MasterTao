@@ -44,7 +44,7 @@ const swiperFirst = new Swiper('.slider_info', {
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    1024: {
+    1025: {
       spaceBetween: 40,
       navigation: {
         enabled: true,
@@ -55,7 +55,33 @@ const swiperFirst = new Swiper('.slider_info', {
   }
 });
 
-// _____swiper delivery_____
+// _____swiper advantages_____
+const swiperAdvantages = new Swiper('.slider_advantages', {  
+  spaceBetween: 12,
+  loop: true,
+  slidesPerView: 1,
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      enabled: true,
+  },
+  breakpoints: {
+    1025: {
+      spaceBetween: 0,
+      initialSlide: 0,
+      loop: false,
+      slidesPerColumn: 2,
+      slidesPerGroup: 8,
+      simulateTouch: false,
+      pagination: {
+          enabled: false,
+          el: '.swiper-pagination',
+      },
+    }
+  }
+});
+
+// _____swiper template_____
 const swiperTemplate = new Swiper('.swiper_template', {  
   loop: true,
   slidesPerView: 1,
@@ -71,12 +97,25 @@ const swiperTemplate = new Swiper('.swiper_template', {
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    1024: {
-      spaceBetween: 20,
+    1025: {
+      spaceBetween: 0,
+      slidesPerView: 2,
+      pagination: {
+        enabled: false,
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        enabled: true,
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    },
+    1400: {
+      spaceBetween: 0,
       slidesPerView: 3,
       pagination: {
-        el: '.swiper-pagination',
         enabled: false,
+        el: '.swiper-pagination',
       },
       navigation: {
         enabled: true,
@@ -109,32 +148,7 @@ fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classLi
 // let swiperAdvantages  
 
 // function initAdvantages() {
-const swiperAdvantages = new Swiper('.slider_advantages', {  
-  spaceBetween: 12,
-  loop: true,
-  slidesPerView: 1,
-  // initialSlide: 2,
-  pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      enabled: true,
-  },
-  breakpoints: {
-    1025: {
-      spaceBetween: 0,
-      initialSlide: 0,
-      loop: false,
-      slidesPerColumn: 2,
-      // slidesPerView: 8,
-      slidesPerGroup: 8,
-      simulateTouch: false,
-      pagination: {
-          enabled: false,
-          el: '.swiper-pagination',
-      },
-    }
-  }
-});
+
 
 // }
 
