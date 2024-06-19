@@ -55,6 +55,8 @@ const swiperFirst = new Swiper('.slider_info', {
 });
 
 // _____swiper advantages_____
+const advantagesCount = document.querySelectorAll('.slider_advantages .swiper-slide').length
+
 const swiperAdvantages = new Swiper('.slider_advantages', {  
   spaceBetween: 12,
   loop: true,
@@ -70,7 +72,7 @@ const swiperAdvantages = new Swiper('.slider_advantages', {
       spaceBetween: 0,
       initialSlide: 0,
       loop: false,
-      slidesPerGroup: 8,
+      slidesPerGroup: advantagesCount,
       simulateTouch: false,
       pagination: {
           enabled: false,
