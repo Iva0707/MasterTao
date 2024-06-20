@@ -183,4 +183,28 @@
         max-width: 360px;
     }
 
+// _________about page__________
+ 
+    .about-page {
+        & .container {
+            flex-direction: column;
+            & .about_content {
+                width: 100%;
+                & .content_container {
+                    & p {
+                        text-align: justify;
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+                }
+            }
+            & .img_box {
+                width: 100%;
+                & img {
+                    max-width: 277px;
+                }
+            }
+        }
+    }
+
 }
