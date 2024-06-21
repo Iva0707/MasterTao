@@ -10,6 +10,45 @@
     & .accordion {
         max-width: 716px;
         width: 100%;
+        & .accordion-item {
+            margin-bottom: 16px;
+            border-radius: 10px;
+            & .accordion-collapse.show {
+                border-radius: 10px;
+                box-shadow: 5px 15px 40px 0 rgba(11, 24, 97, 0.32);
+            }
+            & .accordion-button {
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 125%;
+                padding: 21px 34px;
+                color: #fff;
+                background-color: #282B38;
+                &:focus,
+                &:active {
+                    outline: none;
+                    border: none;
+                    box-shadow: none;
+                }
+                &.collapsed {
+                    border: 1px solid #3a444e;
+                    transition: .2s;
+                }
+                &:not(.collapsed) {
+                    color: #282b38;;
+                    background-color: #fff;
+                    box-shadow: none;
+                    border: none;
+                }
+            }
+            & .accordion-body {
+                font-weight: 300;
+                font-size: 17px;
+                line-height: 145%;
+                color: #282b38;
+            }
+        }
     }
     & .question_form {
         display: flex;
