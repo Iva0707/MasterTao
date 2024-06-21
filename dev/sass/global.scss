@@ -81,6 +81,11 @@ input {
     }
 }
 
+textarea {
+    resize: none;
+    @extend input
+}
+
 .markup-page {
     margin-top: 100px;
 }
@@ -321,13 +326,14 @@ h6,
 [type="checkbox"] + label:hover::before,
 [type="radio"] + label:hover::before {
   box-shadow: 0px 0px 9px 0 $color-primary;
-
-
 }
 
 [type="text"]:hover,
 [type="text"]:active,
-[type="text"]:focus {
+[type="text"]:focus,
+textarea:hover,
+textarea:active,
+textarea:focus {
     box-shadow: 0px 0px 9px 0 $color-primary;
     transition: .2s;
 }

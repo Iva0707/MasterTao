@@ -1,0 +1,19 @@
+.question-page {
+    & .container {
+        padding: 0 20px;
+    }
+}
+.question_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 34px;
+    & .accordion {
+        max-width: 716px;
+        width: 100%;
+    }
+    & .question_form {
+        display: flex;
+        flex-direction: column;
+        padding: 38px 40px;
+    }
+}
