@@ -50,7 +50,30 @@
         }
     }
 
-// _________about page_________    
+// _________questoin page_________    
 
-    
+    .question_container {
+        & .accordion {
+            & .accordion-item {
+                & .accordion-button {
+                    font-size: 16px;
+                    line-height: 124.5%;
+                    padding: 12px 19px 10px 22px;
+                    &:after {
+                        margin-left: 15px;
+                    }
+                }
+                & .accordion-body {
+                    font-size: 14px;
+                    line-height: 145.5%;
+                    padding: 0px 15px 12px 22px;
+                    margin-top: -3px;
+                }
+            }
+        }
+        & .question_form {
+            padding: 38px 20px;
+        }
+    }
+
 }

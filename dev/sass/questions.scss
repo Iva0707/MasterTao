@@ -16,7 +16,7 @@
             border: none;
             & .accordion-collapse.show {
                 border-radius: 10px;
-                box-shadow: 5px 15px 40px 0 rgba(11, 24, 97, 0.32);
+                box-shadow: 5px 15px 40px 0 #0b186152;
             }
             & .accordion-button {
                 border-radius: 9px;
@@ -24,8 +24,10 @@
                 font-size: 18px;
                 line-height: 125%;
                 padding: 18px 18px 17px 34px;
-                color: #fff;
-                background-color: #282B38;
+                color: $color-text;
+                background-color: $color-background;
+                display: flex;
+                justify-content: space-between;
                 &:focus,
                 &:active {
                     outline: none;
@@ -38,9 +40,9 @@
                 }
                 &:not(.collapsed) {
                     color: #282b38;;
-                    background-color: #fff;
+                    background-color: $color-text;
                     box-shadow: none;
-                    border: 1px solid #fff;
+                    border: 1px solid $color-text;
                     &:after {           
                         filter: brightness(0) saturate(100%) invert(62%) sepia(78%) saturate(703%) hue-rotate(336deg) brightness(95%) contrast(89%);
                         transform: rotate(-90deg);
@@ -51,6 +53,7 @@
                     background: url('assets/img/btn_arrow.svg');
                     width: 27px;
                     height: 27px;
+                    margin-left: 30px;
                     filter: invert(100%) sepia(0%) saturate(0%) brightness(180%) contrast(101%);
                 }
             }
@@ -58,7 +61,7 @@
                 font-weight: 300;
                 font-size: 17px;
                 line-height: 145%;
-                color: #282b38;
+                color: $color-background;
                 padding: 0px 74px 20px 34px;
                 margin-top: -6px;
             }
@@ -88,13 +91,6 @@
         }
         & textarea {
             padding: 18px 20px 4px;
-        }
-        & .btn-lg {
-            padding: 19px 31px 19px 33px;
-            text-align: left;
-            & .icon {
-                margin: 0 -14px 0 95px;
-            }
         }
     }
 }

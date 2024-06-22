@@ -207,4 +207,23 @@
         }
     }
 
+// _________question page__________
+
+    .question_container {
+        flex-direction: column;
+        & .accordion {
+            max-width: 100%;
+        }
+        & .question_form {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            & .form_description {
+                text-align: center;
+            }
+        }
+    }
+
+
+
 }
