@@ -78,8 +78,32 @@
 
 // _________registration page_________    
 
-    .registration_content .registration_row .img_box {
-        height: 363px;
+ 
+
+    .registration_content {
+        gap: 42px;
+        & .registration_row {
+            gap: 34px;
+            & .description_box {
+                & ul {
+                    font-size: 16px;
+                    line-height: 150%;
+                    text-align: justify;
+                    & li {
+                        margin-bottom: 20px;
+                    }
+                }
+                & .registration_btn .btn-lg {
+                    width: 100%;
+                }
+            }
+            & .img_box {
+                height: 245px;
+            }
+            & .btn_margin {
+                margin-bottom: 30px;
+            }
+        }
     }
 
 }

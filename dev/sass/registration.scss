@@ -27,12 +27,16 @@
             }
         }
         & .img_box {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 20px;
+            position: relative;
+            height: 406px;
+            // box-shadow: 5px 15px 40px 0 #0b186152;
+            // filter: drop-shadow(5px 15px 40px #0b186152);
             & img {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                overflow: hidden;
-                border-radius: 20px;
                 object-fit: contain;
             }
         }

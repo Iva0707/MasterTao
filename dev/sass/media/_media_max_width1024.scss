@@ -225,8 +225,9 @@
     }
 
  // _________registration page__________
-
+ 
     .registration_content {
+        gap: 75px;
         & .registration_row {
             flex-direction: column;
             &.flex_reverse {
