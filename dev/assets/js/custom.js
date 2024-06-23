@@ -149,9 +149,14 @@ $( document ).ready(function(){
 // _____registration page_____
 
   const list = document.querySelectorAll('.custom_li')
+  const btn = document.querySelector('.registration_btn')
 
     $(list).each(function() {
       $(this).children('li:last').css('margin-bottom', '0px');
     });
+
+    console.log(btn)
+
+    btn.previousElementSibling.classList.add('test')
     
 });

@@ -10,7 +10,7 @@
 .registration_row {
     display: flex;
     align-items: center;
-    gap: 57px;
+    gap: 52px;
     & .description_box {
         width: 50%;
         & ul {
@@ -22,10 +22,6 @@
                 padding-left: 3px;
             }
         }
-        & .list_margin {
-            margin-bottom: 0px;
-            background-color: black;
-        }
         & .btn_box {
             text-align: center;
         }
@@ -34,8 +30,15 @@
         width: 50%;
         display: flex;
         justify-content: center;
-        align-items: center;
         object-fit: contain;
+        & img {
+            border-radius: 20px;
+        }
+    }
+    
+    & .test {
+        margin-bottom: 50px;
     }
 }
+
 
