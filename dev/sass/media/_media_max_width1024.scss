@@ -224,6 +224,24 @@
         }
     }
 
+ // _________registration page__________
 
+    .registration_content {
+        & .registration_row {
+            flex-direction: column;
+            &.flex_reverse {
+                flex-direction: column-reverse;
+            }
+            & .description_box {
+                width: 100%;
+                & .registration_btn {
+                    text-align: center;
+                }
+            }
+            & .img_box {
+                width: 100%;
+            }
+        }
+    }
 
 }

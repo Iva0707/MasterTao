@@ -155,8 +155,6 @@ $( document ).ready(function(){
       $(this).children('li:last').css('margin-bottom', '0px');
     });
 
-    console.log(btn)
-
-    btn.previousElementSibling.classList.add('test')
+    btn.previousElementSibling.classList.add('btn_margin')
     
 });

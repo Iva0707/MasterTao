@@ -58,7 +58,7 @@ ol li {
 
 ul {
     padding-left: 0px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 a {
@@ -151,12 +151,11 @@ textarea {
 .custom_li li:before {
     content: "";
     background-color: #ffffff;
-    margin-right: 12px;
     width: 4px;
     height: 4px;
     border-radius: 50%;
     display: inline-block;
-    margin: 0px 0px 3px 0px;
+    margin: 0px 7px 3px 0px;
 }
 
 .fw_300 {
