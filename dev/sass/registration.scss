@@ -1,6 +1,36 @@
-.registration_content {
-    // display: flex;
-    & .registration_row {
+.registration-page {
+    & .container {
+        max-width: 1200px;
+    }
+}
+
+
+
+
+.registration_row {
+    display: flex;
+    align-items: center;
+    gap: 57px;
+    & .description_box {
+        width: 50%;
+        & ul {
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 157%;
+            & li {
+                margin-bottom: 26px;
+                padding-left: 3px;
+            }
+        }
+        & .btn_box {
+            text-align: center;
+        }
+    }
+    & .img_box {
+        width: 50%;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
     }
 }

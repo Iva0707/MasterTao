@@ -56,6 +56,10 @@ ol li {
     list-style: none;
 }
 
+ul {
+    padding-left: 0px;
+}
+
 a {
     color: $color-accent;
     text-decoration: underline;
@@ -143,14 +147,15 @@ textarea {
     background-color: $color-primary;
 }
 
-.markup__ul_container ul li:before {
+.custom_li li:before {
     content: "";
-    background-color: $color-primary;
+    background-color: #ffffff;
     margin-right: 12px;
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     display: inline-block;
+    margin: 0px 0px 3px 0px;
 }
 
 .fw_300 {
