@@ -129,46 +129,29 @@ const swiperTemplate = new Swiper('.swiper_template', {
 
 // _____input file_____
 
-const fileLabel = document.querySelectorAll('.calculation_label');
-const fileInput = document.querySelectorAll('.calculation_input');
-const fileBtn = document.querySelectorAll('.form_btn')
+$( document ).ready(function(){
 
-fileInput.forEach(item => {
-  item.addEventListener('change', function() {
-    let fileName = item.closest('.input_box').querySelector('.file_name')
-    fileName.innerHTML = item.files[0].name;
+  const fileLabel = document.querySelectorAll('.calculation_label');
+  const fileInput = document.querySelectorAll('.calculation_input');
+  const fileBtn = document.querySelectorAll('.form_btn')
+
+  fileInput.forEach(item => {
+    item.addEventListener('change', function() {
+      let fileName = item.closest('.input_box').querySelector('.file_name')
+      fileName.innerHTML = item.files[0].name;
+    })
   })
-})
 
-fileLabel.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('special_gap'))
-fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('btn_gap'))
-
-
-// _____swiper advantager_____
-
-// let swiperAdvantages  
-
-// function initAdvantages() {
+  fileLabel.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('special_gap'))
+  fileBtn.forEach(item => item.closest('.form_row').previousElementSibling.classList.add('btn_gap'))
 
 
-// }
+// _____registration page_____
 
-// function initialSlide() {
-//   swiperAdvantages.initialSlide: 0   
-// }
+  const list = document.querySelectorAll('.custom_li')
 
-// function mediaQuery(matchMedia1024) {
-//     if (matchMedia1024.matches) { // If media query matches
-//       initAdvantages()
-//     } else {
-//       destroyAdvantages()
-//     }
-// }
-
-// const matchMedia1024 = window.matchMedia("(max-width: 1024px)")
-
-// mediaQuery(matchMedia1024);
-
-// matchMedia1024.addEventListener("change", function() {
-//     mediaQuery(matchMedia1024);
-// });
+    $(list).each(function() {
+      $(this).children('li:last').css('margin-bottom', '0px');
+    });
+    
+});

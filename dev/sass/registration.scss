@@ -22,6 +22,10 @@
                 padding-left: 3px;
             }
         }
+        & .list_margin {
+            margin-bottom: 0px;
+            background-color: black;
+        }
         & .btn_box {
             text-align: center;
         }
@@ -34,3 +38,4 @@
         object-fit: contain;
     }
 }
+
