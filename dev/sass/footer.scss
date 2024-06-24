@@ -1,0 +1,17 @@
+footer {
+    @extend section;
+    .container {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #E58D35;
+            top: -45px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+
+}

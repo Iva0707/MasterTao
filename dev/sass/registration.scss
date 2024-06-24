@@ -34,10 +34,15 @@
             border-radius: 20px;
             position: relative;
             height: 406px;
-            // box-shadow: 5px 15px 40px 0 #0b186152;
-            // filter: drop-shadow(5px 15px 40px #0b186152);
+            // background-color: rgba(255, 255, 0, 0.263);
+            // padding-top: 15px;
+            // padding-bottom: 15px;
+            // margin-left: -15px;
             & img {
                 object-fit: contain;
+                // max-width: calc(100% - 30px);
+                // box-shadow: 5px 15px 40px 0 #0b186152;
+                // filter: drop-shadow(5px 15px 20px #0b186152);
             }
         }
         & .btn_margin {
