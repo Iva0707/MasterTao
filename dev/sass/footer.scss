@@ -1,6 +1,9 @@
 footer {
     @extend section;
+    padding-bottom: 45px;
     .container {
+        padding-left: 20px;
+        padding-right: 20px;
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -8,15 +11,16 @@ footer {
             line-height: 161%;
             color: #85899c;
             &:hover {
-                transform: scale(2);
+                color: $color-primary;
+                transition: .2s;
             }
         }
         &:before {
             content: '';
             position: absolute;
-            width: 100%;
+            width: calc(100% - 40px);
             height: 2px;
-            background-color: #E58D35;
+            background-color: $color-accent;
             top: -45px;
             left: 50%;
             transform: translate(-50%, 0);
@@ -25,28 +29,36 @@ footer {
             font-size: 14px;
             line-height: 162%;
             & .logo {
-                margin-bottom: 40px;
+                margin-bottom: 28px;
             }
             & ul {
                 margin-bottom: 20px;
                 & a {
-                    color: white;
+                    color: $color-text;
+                    &.phone {
+                        text-decoration: none;
+                    }
                 }
             }
             & .icon_container {
                 display: flex;
                 gap: 8px;
+                & .icon_item img {
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
         }
-        & .nav_container {
+        & .navigation_container {
             display: flex;
             justify-content: space-between;
-            margin: 0 50px;
+            margin: 0 81px;
             min-width: 706px;
             & h5 {
                 font-weight: 700;
                 line-height: 146%;
-                margin-bottom: 14px;
+                margin-bottom: 8px;
             }
         }
     }
