@@ -2,6 +2,15 @@ footer {
     @extend section;
     .container {
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        & a {
+            line-height: 161%;
+            color: #85899c;
+            &:hover {
+                transform: scale(2);
+            }
+        }
         &:before {
             content: '';
             position: absolute;
@@ -11,6 +20,34 @@ footer {
             top: -45px;
             left: 50%;
             transform: translate(-50%, 0);
+        }
+        & .contact_container {
+            font-size: 14px;
+            line-height: 162%;
+            & .logo {
+                margin-bottom: 40px;
+            }
+            & ul {
+                margin-bottom: 20px;
+                & a {
+                    color: white;
+                }
+            }
+            & .icon_container {
+                display: flex;
+                gap: 8px;
+            }
+        }
+        & .nav_container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 50px;
+            min-width: 706px;
+            & h5 {
+                font-weight: 700;
+                line-height: 146%;
+                margin-bottom: 14px;
+            }
         }
     }
 
