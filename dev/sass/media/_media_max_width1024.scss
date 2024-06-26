@@ -47,49 +47,51 @@
 
     // _________header_________
     
-    .header_container {
-        padding-top: 18px;
-        padding-bottom: 18px;
-    }
-    
-    .logo{
-        max-width: 126px;
-    }
-    
-    .nav_section {
-        position: absolute;
-        background-color: $color-bg-light;
-        box-shadow: 14px 22px 40px 0 $box-shadow;
-        top: 72px;
-        left: 0;
-        max-height: 0px;
-        overflow: hidden;
-        flex-direction: column;
-        align-items: center;
-        transition: .2s;
-        z-index: 3;
-        &.show {
-            max-height: 508px;
+    .header-page {
+        .header_container {
+            padding-top: 18px;
+            padding-bottom: 18px;
         }
-    }
-    
-    .nav_list {
-        flex-direction: column;
-        gap: 11px;
-        margin-top: 37px;
-        margin-bottom: 34px;
-        a {
-            font-size: 24px;
-            line-height: 222%;
-        }
-    }
-    
-    .nav_btn {
-        padding: 21px 84px;
-        font-size: 16px;
-        margin-bottom: 60px;
-    }
 
+        .logo{
+            max-width: 126px;
+        }
+
+        .nav_section {
+            position: absolute;
+            background-color: $color-bg-light;
+            box-shadow: 14px 22px 40px 0 $box-shadow;
+            top: 72px;
+            left: 0;
+            max-height: 0px;
+            overflow: hidden;
+            flex-direction: column;
+            align-items: center;
+            transition: .2s;
+            z-index: 3;
+            &.show {
+                max-height: 508px;
+            }
+        }
+
+        .nav_list {
+            flex-direction: column;
+            gap: 11px;
+            margin-top: 37px;
+            margin-bottom: 34px;
+            a {
+                font-size: 24px;
+                line-height: 222%;
+            }
+        }
+
+        .nav_btn {
+            padding: 21px 84px;
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+    }
+    
     #burger {
         display: flex;
         margin-left: auto;
@@ -241,6 +243,25 @@
             }
             & .img_box {
                 width: 100%;
+            }
+        }
+    }
+
+// _________footer__________
+
+    #footer_nav {
+        display: none;
+    }
+
+    .footer-page {
+        padding-top: 90px;
+        & .container {
+            & .contact_container {
+                 margin: 0 auto;
+                 text-align: center;
+                & .icon_container {
+                    justify-content: center;
+                }
             }
         }
     }

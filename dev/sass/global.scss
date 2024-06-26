@@ -23,6 +23,11 @@ body.overflow-hidden {
         backdrop-filter: blur(4px);
     }
 }
+// section:nth-child(odd) {
+//         background-color: yellow;
+// }
+
+
 section {
     padding: 90px 0 100px;
     &.accent_bg {
