@@ -45,6 +45,7 @@
                 gap: 8px;
                 & .icon_item img {
                     cursor: pointer;
+                    max-width: 34px;
                     &:hover {
                         transform: scale(1.1);
                     }
