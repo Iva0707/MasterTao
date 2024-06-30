@@ -87,6 +87,7 @@ const swiperTemplate = new Swiper('.swiper_template', {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 15,
+  slideToClickedSlide: true,
   pagination: {
     el: '.swiper-pagination',
     enabled: true,
@@ -158,3 +159,48 @@ $( document ).ready(function(){
     btn.previousElementSibling.classList.add('btn_margin')
     
 });
+
+
+const productsLink = document.querySelector('#products_link')
+const insuranceLink = document.querySelector('#cargo_insurance_link')
+const rentLink = document.querySelector('#rent_link')
+const moneyTransferLink = document.querySelector('#money_transfer_link')
+
+const products = document.querySelector('#products')
+const insurance = document.querySelector('#cargo_insurance')
+const rent = document.querySelector('#rent')
+const moneyTransfer = document.querySelector('#money_transfer')
+
+console.log(productsLink);
+
+const getSlide = () => {
+  productsLink.addEventListener('click', () => {
+    products.scrollIntoView({ behavior: 'smooth' });
+  });
+};
+
+
+// getSlide(productsLink, products)
+// getSlide(insuranceLink, insurance)
+// getSlide(rentLink, rent)
+// getSlide(moneyTransferLink, moneyTransfer)
+
+
+
+
+
+
+
+
+
+
+
+
+// const showInformation =(cell, atrr)=> buildItem.forEach(object => { /* обратились к каждому обьекту с масссива */ /* сделали из нее константу и функцию */
+//   object.addEventListener('mouseover', ()=> { /* добавляем функцию по наведению мыши */
+//       const value = object.getAttribute(atrr) /* создаем переменную с получением атрибута */
+//       cell.innerText = value /* заменяем текст html на полученный из атрибута */
+//   })
+// })
+
+// showInformation(cellAddress, 'data-address')
