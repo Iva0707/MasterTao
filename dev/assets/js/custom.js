@@ -161,46 +161,24 @@ $( document ).ready(function(){
 });
 
 
-const productsLink = document.querySelector('#products_link')
-const insuranceLink = document.querySelector('#cargo_insurance_link')
-const rentLink = document.querySelector('#rent_link')
-const moneyTransferLink = document.querySelector('#money_transfer_link')
+const productsLink = document.querySelector('#products_link a')
+const insuranceLink = document.querySelector('#cargo_insurance_link a')
+const rentLink = document.querySelector('#rent_link a')
+const moneyTransferLink = document.querySelector('#money_transfer_link a')
 
 const products = document.querySelector('#products')
 const insurance = document.querySelector('#cargo_insurance')
 const rent = document.querySelector('#rent')
 const moneyTransfer = document.querySelector('#money_transfer')
 
-console.log(productsLink);
-
-const getSlide = () => {
-  productsLink.addEventListener('click', () => {
-    products.scrollIntoView({ behavior: 'smooth' });
-  });
+const getSlide = (link, slide) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault() 
+    slide.scrollIntoView({ behavior: 'smooth' })
+  })
 };
 
-
-// getSlide(productsLink, products)
-// getSlide(insuranceLink, insurance)
-// getSlide(rentLink, rent)
-// getSlide(moneyTransferLink, moneyTransfer)
-
-
-
-
-
-
-
-
-
-
-
-
-// const showInformation =(cell, atrr)=> buildItem.forEach(object => { /* обратились к каждому обьекту с масссива */ /* сделали из нее константу и функцию */
-//   object.addEventListener('mouseover', ()=> { /* добавляем функцию по наведению мыши */
-//       const value = object.getAttribute(atrr) /* создаем переменную с получением атрибута */
-//       cell.innerText = value /* заменяем текст html на полученный из атрибута */
-//   })
-// })
-
-// showInformation(cellAddress, 'data-address')
+getSlide(productsLink, products)
+getSlide(insuranceLink, insurance)
+getSlide(rentLink, rent)
+getSlide(moneyTransferLink, moneyTransfer)
