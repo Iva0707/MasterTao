@@ -160,25 +160,41 @@ $( document ).ready(function(){
     
 });
 
+// _____footer links_____
 
-const productsLink = document.querySelector('#products_link a')
-const insuranceLink = document.querySelector('#cargo_insurance_link a')
-const rentLink = document.querySelector('#rent_link a')
-const moneyTransferLink = document.querySelector('#money_transfer_link a')
+// выделяем все ссылки в которых data-swiper-transfer равен значению services
+const servicesLinks = document.querySelectorAll("a[data-swiper-transfer='services']");
+const deliveryLinks = document.querySelectorAll("a[data-swiper-transfer='delivery']");
+const servicesSlideContainer = document.querySelector(".services-page .swiper_template .swiper-wrapper");
+const deliverySlideContainer = document.querySelector(".delivery-page .swiper_template .swiper-wrapper");
 
-const products = document.querySelector('#products')
-const insurance = document.querySelector('#cargo_insurance')
-const rent = document.querySelector('#rent')
-const moneyTransfer = document.querySelector('#money_transfer')
+// swiperTemplate - хранит в себе два слайдера, первый, с доставкой, и второй, с услугами( в виде массива )
 
-const getSlide = (link, slide) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault() 
-    slide.scrollIntoView({ behavior: 'smooth' })
-  })
-};
+scrollToSlide(swiperTemplate[0], deliveryLinks, deliverySlideContainer);
+scrollToSlide(swiperTemplate[1], servicesLinks, servicesSlideContainer);
 
-getSlide(productsLink, products)
-getSlide(insuranceLink, insurance)
-getSlide(rentLink, rent)
-getSlide(moneyTransferLink, moneyTransfer)
+function scrollToSlide(swiperSlider, links, sliderContainer) {
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // берем то что в href указано у ссылки и удаляем решетку
+      const slideId = link.hash.replace("#", "");
+      // получаем индекс слайда в нашем слайде( его порядковый номер )
+      const slideIndex = Array.from(
+        sliderContainer.querySelectorAll(".swiper-slide")
+      ).findIndex((el) => el.id === slideId);
+
+      if (slideIndex === -1) {
+        // значит слайд не был найден...
+        return;
+      }
+
+      // получаем слайд, чтобы потом перекинуть юзера на него
+      const slide = sliderContainer.querySelector(`#${slideId}`);
+      swiperSlider.slideTo(slideIndex);
+
+      slide.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
