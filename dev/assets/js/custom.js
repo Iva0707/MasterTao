@@ -29,6 +29,12 @@ function showNav(){
 
 burger.addEventListener('click', showNav);
 
+$(navSection).click(function(){
+  body.classList.remove('overflow-hidden');
+  navSection.classList.remove('show');
+  burger.classList.remove('is-active');
+});
+
 // _____swiper first screen_____
 const swiperFirst = new Swiper('.slider_info', {  
   spaceBetween: 12,
